@@ -1,0 +1,217 @@
+body{
+    background-image: url(./Images/1.jpg);
+    height: 50%;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("./images/heart.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+}
+  
+.like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+}
+  
+@keyframes like-anim {
+    to {
+      background-position: right;
+    }
+}
+  
+.like-button .heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+}
+  
+.like-button .heart-bg:hover {
+    background: rgba(255, 192, 200, 0.7);
+}
+  
+.like-button {
+    display: flex;
+    align-items: center;
+}
+  
+.like-button .likes-amount {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    font-weight: 900;
+    margin-left: 6px;
+}
+
+.download-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px
+}
+
+.download-button i {
+    color: #fff; /* Change the color of the icon */
+}
+/* share button */
+* {
+    margin: 0;
+    padding: 0;
+}
+*,::before,::after {
+    box-sizing: border-box;
+}
+/* body {
+    background-color: #ebecee;
+} */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+a, label {
+    -webkit-tap-highlight-color: transparent;
+}
+.site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.share input {
+    display: none;
+}
+.share {
+    position: relative;
+    width: 360px;
+    height: auto;
+}
+.share label {
+    position: absolute;
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    box-shadow: #ff512f 0 15px 18px -8px;
+    color:#fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    
+    top:13px;
+    left:50%;
+    margin-left: -30px;
+    transition: opacity .3s, transform .3s, box-shadow .2s;
+    transition-timing-function: cubic-bezier(0.63, -0.55, 0.38, 1.7);
+}
+.share input:checked ~ label {
+    opacity: 0;
+    transform: scale(.8);
+    box-shadow: 0 0 0 30px rgb(0 0 0 / 10%);
+    transition: opacity .2s 1s, transform 1s, box-shadow 1s;
+}
+.share ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 25px;
+    margin: auto;
+    border-radius: 40px;
+    /* background-color: rgb(255 255 255 / 50%); */
+    width: 100px;
+    opacity: 0;
+    transition: width .3s, opacity .2s;
+}
+.share input:checked ~ ul {
+    width: 360px;
+    opacity: 1;
+    transition: width .3s 1s, opacity .2s 1s;
+}
+.share ul li a {
+    font-size: 1.25em;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition:transform .3s;
+}
+.share ul li:where(:nth-child(1), :nth-child(2)) {
+    transform: translateX(80px);
+}
+.share ul li:where(:nth-child(4), :nth-child(5)) {
+    transform: translateX(-80px);
+}
+.share ul li {
+    transition: transform .3s 1s cubic-bezier(0.63, -0.5 ,0.38,1.7);
+}
+.share input:checked ~ ul li {
+    transform: translateX(0);
+}
+.share ul li.twitter a {
+    background-color:#1da1f2;
+    box-shadow: #1da1f2 0 15px 18px -8px;
+}
+.share ul li.facebook a {
+    background-color: #3b5998;
+    box-shadow: #3b5998 0 15px 18px -8px;
+}
+.share ul li.close a {
+    background-color: #000;
+    box-shadow: #000 0 15px 18px -8px;
+}
+.share ul li.dribbble a {
+    background-color: #ea4c89;
+    box-shadow: #ea4c89 0 15px 18px -8px;
+}
+.share ul li.whatsapp a {
+    background-color: #25d366;
+    box-shadow: #25d366 0 15px 18px -8px;
+}
+.share ul li a:hover {
+    transform: translateY(-10px);
+}
+.share ul li a i {
+    transition: transform .5s;
+}
+.share ul li a:hover i {
+    transform: rotate(360deg);
+}
+.share {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+  
+  
+  
+
+
+
+
+
+
